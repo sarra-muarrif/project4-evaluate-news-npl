@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo&display=swap");
+$font-name: "Cairo", sans-serif;
+$base-color: #ffffff;
+$parimay-color: #d1a01a;
+
+@mixin font-style {
+  font-family: $font-name;
+  font-size: 16px;
+  font-weight: bold;
+  color: #212529;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $base-color;
+  min-height: 100vh;
+}
+main {
+  padding: 12px 18px;
+  margin: 12px auto;
+  border-radius: 12px;
+  flex: 2;
+  p {
+    padding: 12px 0;
+    margin: 12px 0;
+    border-bottom: 2px solid $parimay-color;
+    @include font-style();
+  }
+}
+section {
+  max-width: 800px;
+  margin: 20px auto;
+}
+.results-box {
+  @include font-style();
+}
+#results {
+  display: none;
+  line-height: 25px;
+  font-size: 14px;
+  border: 2px solid $parimay-color;
+  padding: 12px;
+  margin: 12px auto;
+}

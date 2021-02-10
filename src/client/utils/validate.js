@@ -1,9 +1,7 @@
-var validUrl = require('valid-url');
-function isURLValid(inputURL) {
-    if (validUrl.isUri(inputURL)) {
-        console.log('Looks like an URI');
-    } else {
-        console.log('Not a URI');
-    }
+
+function isURLValid(value) {
+    var expression = /[-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*)?/gi
+    var regexp = new RegExp(expression);
+    return regexp.test(value);
 }
 export { isURLValid }

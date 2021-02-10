@@ -1,0 +1,9 @@
+
+footer{
+    margin: 20px;
+    border-top:2px solid $parimay-color;
+    padding: 12px 0;
+    p{
+        @include font-style();
+    }
+}

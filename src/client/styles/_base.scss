@@ -9,6 +9,15 @@ $parimay-color: #d1a01a;
   font-weight: bold;
   color: #212529;
 }
+@mixin  border-box {
+  display: none;
+  line-height: 25px;
+  font-size: 14px;
+  border: 2px solid $parimay-color;
+  padding: 12px;
+  margin: 12px auto;
+  
+}
 body {
   display: flex;
   flex-direction: column;
@@ -37,10 +46,8 @@ section {
   @include font-style();
 }
 #results {
-  display: none;
-  line-height: 25px;
-  font-size: 14px;
-  border: 2px solid $parimay-color;
-  padding: 12px;
-  margin: 12px auto;
+ @include border-box();
+}
+#error{
+  @include border-box();
 }

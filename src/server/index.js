@@ -37,25 +37,11 @@ app.get('/test', (req, res) => {
     res.send(mockAPIResponse)
 })
 
-/* TODO:
-    1. GET the url from the request body
-    2. Build the URL
-    3. Fetch Data from API
-    4. Send it to the client
-    5. REMOVE THIS TODO AFTER DOING IT 😎😎
-    server sends only specified data to the client with below codes
-     const projectData = {
-       score_tag : mcData.score_tag,
-       agreement : mcData.agreement,
-       subjectivity : mcData.subjectivity,
-       confidence : mcData.confidence,
-       irony : mcData.irony
-     }
-*/
+
 //Post Router
 app.post('/addUrl', async (req, res) => {
     const { url } = req.body;
-    console.log(`your entered url = ${url}`)
+    console.log(`your url = ${url}`)
     const URL = `${BASE_URL}?key=${API_Key}&url=${url}&lang=en`;
     const response = await fetch(URL);
     try {

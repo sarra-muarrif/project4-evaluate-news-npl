@@ -1,6 +1,6 @@
 
 // Import JS File
-import { isURLValid } from './js/validate'
+import { isURLValid } from './utils/validate'
 import { handleSubmit } from './js/formHandler'
 
 // Import SCSS File
